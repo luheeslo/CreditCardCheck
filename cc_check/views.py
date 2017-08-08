@@ -4,5 +4,5 @@ from cc_check import app
 
 
 @app.route('/')
-def hello():
+def main():
     return render_template('index.html')
