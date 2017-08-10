@@ -51,4 +51,4 @@ From root project:
     
 # Index page example
 
-![alt text](https://raw.githubusercontent.com/luheeslo/CreditCardCheck/blob/master/images/example.png)
+![page example](images/example.png)
