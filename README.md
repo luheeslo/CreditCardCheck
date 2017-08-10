@@ -29,7 +29,7 @@ Project related to solution of the Problem One: Validate Credit Card
 
 # Problem solution code
 
-The logic for validate the credit card number is in `cc_check/core.py` and is described above:
+The logic for validate the credit card number is in `cc_check/core.py` and is described below:
 
 ```
 import re
@@ -47,4 +47,8 @@ def validate_cc_number(number):
 # Running Dev Server
 
 From root project:
-    python manage.py runserver
+    `python manage.py runserver`
+    
+# Index page example
+
+![alt text](https://raw.githubusercontent.com/luheeslo/CreditCardCheck/blob/master/images/example.png)
