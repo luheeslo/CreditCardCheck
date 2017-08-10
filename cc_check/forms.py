@@ -1,10 +1,9 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
-from wtforms.validators import Required
+from flask_wtf.file import FileField, FileRequired
 
-from cc_check.validators import CreditCardNumber
+from wtforms import SubmitField
 
 
 class CCCForm(FlaskForm):
-    number = StringField("What is your credit card number?", validators=[Required(), CreditCardNumber()])
+    numbers = FileField("Upload your credit card numbers", validators=[FileRequired()])
     submit = SubmitField('Submit')
