@@ -5,5 +5,5 @@ from wtforms import SubmitField
 
 
 class CCCForm(FlaskForm):
-    numbers = FileField("Upload your credit card numbers", validators=[FileRequired()])
+    numbers = FileField("Upload your credit card numbers:", validators=[FileRequired()])
     submit = SubmitField('Submit')
