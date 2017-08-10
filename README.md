@@ -2,7 +2,7 @@
 
 Project related to solution of the Problem One: Validate Credit Card
 
-# Project Structure
+## Project Structure
 
 ```
 .
@@ -27,7 +27,7 @@ Project related to solution of the Problem One: Validate Credit Card
 3 directories, 14 files
 ```
 
-# Problem solution code
+## Problem solution code
 
 The logic for validate the credit card number is in `cc_check/core.py` and is described below:
 
@@ -44,11 +44,11 @@ def validate_cc_number(number):
     return False
 ```
 
-# Running Dev Server
+## Running Dev Server
 
 From root project:
     `python manage.py runserver`
     
-# Index page example
+## Index page example
 
 ![page example](images/example.png)
