@@ -1,28 +1,24 @@
-{% extends "bootstrap/base.html" %}
-	{% block title %}Check Credit Card{% endblock %}
-{% block navbar %}
-<div class="navbar navbar-inverse" role="navigation">
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle"
-			data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="/">Check Credit Card</a>
-	      </div>	
-	     <div class="navbar-collapse collapse">
-		    <ul class="nav navbar-nav">
-			<li><a href="/">Home</a></li>
-		   </ul>
-	    </div>
-	</div>
-</div>
-{% endblock %}
-{% block content %}
-<div class="container">
-	{% block page_content %}{% endblock %}
-</div>
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+    {{ wtf.quick_form(form) }}
+    {% if checks %} 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Validate</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% for check in checks %}
+            <tr class="{{ 'success' if check[1] else 'danger' }}">  
+                <td>{{ check[0] }}</td>
+                <td>{{ 'Valid' if check[1] else 'Invalid' }}</td>
+            </tr>
+    {% endfor %}      
+        </tbody>
+    </table>
+    {% endif %}
 {% endblock %}
